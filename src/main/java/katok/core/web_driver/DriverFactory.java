@@ -5,14 +5,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class DriverFactory {
-    private DriverFactory() {};
+    private DriverFactory() {}
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver==null) {
             return new ChromeDriver();
         }
-        driver.quit();
         return driver;
     }
 }
